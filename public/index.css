@@ -1,0 +1,196 @@
+* {
+	box-sizing: border-box;
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(10px) translateZ(10px);
+		opacity: 0;
+		margin: 5px 0px;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Baloo Chettan 2', cursive;
+}
+
+.section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	width: 100%;
+	margin: 100px 0px;
+}
+
+#experience {
+	flex-direction: column;
+	margin: -50px 0px;
+}
+
+#experience .display {
+	margin: 50px 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#experience .date {
+	font-size: 24px;
+	width: 150px;
+}
+
+#experience .description {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+#experience .description h3 {
+	font-size: 22px;
+	margin: 0px;
+}
+
+#skills .skill-type {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0px -16px;
+}
+
+#skills .skill-type > h3 {
+	margin: 5px 16px;
+	color: #aaa;
+	cursor: pointer;
+	user-select: none;
+}
+
+#skills .skill-type > h3.selected {
+	color: black;
+}
+
+#skills .tag-container {
+	margin: 0px -8px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+#skills .tag {
+	padding: 6px 10px;
+	margin: 5px 8px;
+	/*border: 2px solid #d4d4d4;*/
+	animation-name: slideUp;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-out;
+	user-select: none;
+	color: white;
+	background-color: purple;
+	font-weight: bold;
+	border-radius: 3px;
+}
+
+#color-tree-container {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+}
+
+#color-tree-container > * {
+	display: flex;
+}
+
+#color-tree-container > #legend {
+	position: absolute;
+	flex-direction: column;
+	top: 16px;
+	left: 0px;
+}
+
+#color-tree-container > .sidebar {
+	flex-direction: column;
+	flex-shrink: 1;
+}
+
+#color-tree-container .branch-label {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#color-tree-container .branch {
+	width: 30px;
+	height: 0px;
+	border-bottom: 6px solid;
+	margin-left: 10px;
+}
+
+#color-tree-container .branch.left {
+	border-color: red;
+}
+
+#color-tree-container .branch.right {
+	border-color: blue;
+}
+
+/* tree styles */
+#color-tree {
+	width: 80vw;
+	height: 80vw;
+	max-width: 700px;
+	max-height: 700px;
+	min-width: 300px;
+	min-height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+
+#color-tree .branchbox {
+	width: 100%;
+	height: 100%;
+}
+
+#color-tree .node {
+	border: 2px solid #777;
+	border-radius: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+
+#color-tree .node:hover {
+	background-color: #e4e4e4 !important;
+}
+
+#color-tree-container .pick-color {
+	display: flex;
+	flex-direction: row;
+}
+
+#color-tree-container .pick-color > div {
+	flex-grow: 1;
+}
+
+#color-tree-container .pick-color > button {
+	flex-shrink: 1;
+}
+
+.autocomplete .colorbox {
+	height: 16px;
+	width: 16px;
+	margin-left: 10px;
+}

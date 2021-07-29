@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="js/treap.js"></script>
+	<script type="text/javascript" src="js/color-tree.js"></script>
+	<script type="text/javascript" src="js/radix-trie.js"></script>
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+</head>
+<body>
+	<div id="intro">
+		<h1>Jonathan Walker</h1>
+	</div>
+	<h2>About</h2>
+	<div id="about" class="section">
+		<p>Hello! I am a full stack developer currently living in Phoenix, AZ.</p>
+	</div>
+	<div id="skills" class="section">
+		<div class="skill-type">
+			<h3 class="selected">Languages</h3>
+			<h3>Frameworks</h3>
+			<h3>More</h3>
+		</div>
+		<div class="tag-container">
+			<div class="tag">
+				<span>Node.js</span>
+			</div>
+			<div class="tag">
+				<span>Javascript</span>
+			</div>
+			<div class="tag">
+				<span>HTML</span>
+			</div>
+			<div class="tag">
+				<span>CSS</span>
+			</div>
+			<div class="tag">
+				<span>Java</span>
+			</div>
+			<div class="tag">
+				<span>Python</span>
+			</div>
+			<div class="tag">
+				<span>Swift</span>
+			</div>
+		</div>
+	</div>
+	<h2>Experience</h3>
+	<div id="experience" class="section">
+		<div class="display">
+			<div class="date">
+				<span>2018 - Present</span>
+			</div>
+			<div class="description">
+				<h3>Fullstack Web Developer</h3>
+				<div>
+					<span>Swift Transportation</span>
+				</div>
+				<div>
+					<span>Phoenix, AZ</span>
+				</div>
+			</div>
+		</div>
+		<div class="display">
+			<div class="date">
+				<span>2018</span>
+			</div>
+			<div class="description">
+				<h3>Thinkful Bootcamp - Fullstack Flex</h3>
+				<div>
+					<span>Phoenix, AZ</span>
+				</div>
+			</div>
+		</div>
+		<div class="display">
+			<div class="date">
+				<span>2015 - 2018</span>
+			</div>
+			<div class="description">
+				<h3>Various Lab Technician Jobs</h3>
+				<div>
+					<span>Minneapolis, MN / Phoenix, AZ</span>
+				</div>
+			</div>
+		</div>
+		<div class="display">
+			<div class="date">
+				<span>2011 - 2015</span>
+			</div>
+			<div class="description">
+				<h3>Bachelor's Degree: Biology</h3>
+				<div>
+					<span>University Of Minnesota</span>
+				</div>
+				<div>
+					<span>Minneapolis, MN</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2>Interests</h2>
+	<h3>Mobile App Development</h3>
+	<div id="mobile-app-container" class="section">
+		<div>
+			<p></p>
+		</div>
+	</div>
+	<h3>Learning New Algorithms And Data Structures</h3>
+	<div id="color-tree-container" class="section">
+		<div id="color-tree"></div>
+		<div id="legend">
+			<div class="branch-label"><span>Left Branch:</span><div class="branch left"></div></div>
+			<div class="branch-label"><span>Right Branch:</span><div class="branch right"></div></div>
+		</div>
+		<form class="sidebar" autocomplete="off" onsubmit="return false;">
+			<div class="description">
+				<p>Try clicking a node to remove, or adding one below!</p>
+			</div>
+			<div class="pick-color">
+				<div id="color-search"></div>
+				<button>Add Node</button>
+			</div>
+		</form>
+	</div>
+	<h2>Contact</h2>
+	<div id="contact" class="section">
+		<p>Contact here</p>
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
