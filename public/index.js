@@ -2,26 +2,53 @@ let P_TREE = null;
 let P_AUTOCOMPLETE = null;
 let HTML_COLORS = null;
 
-const WORK_ITEMS = [
-	{
-		date: '2018 - Present',
-		title: 'Fullstack Web Developer',
-		company: 'Swift Transportation',
-		city: 'Phoenix, AZ'
-	},
-	{
-		date: '2018',
-		title: 'Thinkful Bootcamp - Fulltime Flex',
-		company: null,
-		city: 'Phoenix, AZ'
-	},
-	{
-		date: '2011 - 2015',
-		title: 'BS Degress - Biology',
-		company: 'University Of Minnesota',
-		city: 'Minneapolis, MN'
+function initSplashImg() {
+	const fixStyles = () => {
+		const { scrollY, innerHeight } = window;
+
+		let scrollRatio = scrollY / innerHeight;
+		if (scrollRatio > 1) {
+			scrollRatio = 1;
+		}
+
+		const elements = [
+			{
+				el: document.getElementById('myself'),
+				style: {
+					bottom: `${(10 * scrollRatio) + 3}vh`,
+					right: `${6 * (1 - scrollRatio)}vh`
+				}
+			},
+			{
+				el: document.getElementById('hello'),
+				style: {
+					top: `${10 + (50 * scrollRatio)}vh`,
+					left: `${14 * (1 - scrollRatio)}vh`
+				}
+			},
+			{
+				el: document.getElementById('splash'),
+				style: {
+					opacity: 1 - ((0 - scrollRatio) ** 2)
+				}
+			}
+		];
+
+
+		elements.forEach((item) => {
+			const { el, style } = item;
+
+			Object.entries(style).forEach((item) => {
+				const [prop, val] = item;
+				el.style[prop] = val;
+			});
+		});
 	}
-];
+
+	fixStyles();
+	document.addEventListener('scroll', fixStyles);
+	document.addEventListener('resize', fixStyles);
+}
 
 async function initColors() {
 	HTML_COLORS = await fetch('colors').then(r => r.json());
@@ -110,6 +137,7 @@ function initWorkListeners() {
 }
 
 async function main() {
+	initSplashImg();
 	initSkillListeners();
 	initWorkListeners();
 	await initColors();
