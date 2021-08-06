@@ -78,11 +78,21 @@ body {
 
 #splash #myself {
 	position: absolute;
-	right: 0px;
 	width: 50vh;
 	height: 50vh;
 	object-fit: cover;
 	object-position: right;
+}
+
+@media (max-width: 600px) {
+	#splash #hello {
+		font-size: 5vh;
+	}
+
+	#splash #myself {
+		width: 40vh;
+		height: 40vh;
+	}
 }
 
 h2,h3 {

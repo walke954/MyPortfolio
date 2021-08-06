@@ -16,14 +16,14 @@ function initSplashImg() {
 				el: document.getElementById('myself'),
 				style: {
 					bottom: `${(10 * scrollRatio) + 3}vh`,
-					right: `${6 * (1 - scrollRatio)}vh`
+					right: `${6 * (1 - scrollRatio)}vw`
 				}
 			},
 			{
 				el: document.getElementById('hello'),
 				style: {
 					top: `${10 + (50 * scrollRatio)}vh`,
-					left: `${14 * (1 - scrollRatio)}vh`
+					left: `${8 * (1 - scrollRatio)}vw`
 				}
 			},
 			{
